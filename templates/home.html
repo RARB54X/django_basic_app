@@ -1,63 +1,13 @@
-<!doctype html>
-<h1>TEST DJANGO</h1>
-<a class="cta" href="#tutorials">Ver tutoriales</a>
-</div>
+{% extends 'base.html' %}
 
+{% block content %}
 
-<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-start;align-items:center">
-    <div class="card" style="flex:1;min-width:220px">
-        <h3>Comenzando con Django</h3>
-        <p>Instalación, creación de proyectos y despliegue básico.</p>
-    </div>
-    <div class="card" style="flex:1;min-width:220px">
-        <h3>Python para web</h3>
-        <p>Conceptos esenciales de Python aplicados a desarrollo web.</p>
-    </div>
-    <div class="card" style="flex:1;min-width:220px">
-        <h3>Git y GitHub</h3>
-        <p>Control de versiones y flujo de trabajo con GitHub.</p>
-    </div>
-</div>
-</section>
+<h1>TEST DJANGO {{name}}</h1>
 
+<form action="add">
+    Enter 1st number : <input type="text" name="num1"><br>
+    Enter 2nd number : <input type="text" name="num2"><br>
+    <input type="submit">
 
-<section id="tutorials" style="margin-top:18px">
-    <h2 style="margin:4px 0 12px">Tutoriales Destacados</h2>
-    <div class="grid">
-        <article class="card">
-            <h3>Crear un proyecto Django</h3>
-            <p>Paso a paso para inicializar un proyecto, crear apps y rutas.</p>
-        </article>
-        <article class="card">
-            <h3>Modelos y Bases de Datos</h3>
-            <p>Definir modelos, migraciones y consultas básicas con ORM.</p>
-        </article>
-        <article class="card">
-            <h3>Autenticación</h3>
-            <p>Login, logout y manejo de usuarios en Django.</p>
-        </article>
-    </div>
-</section>
-
-
-<section id="about" style="margin-top:22px">
-    <h2>Acerca</h2>
-    <p style="color:var(--muted)">Esta plantilla es un punto de partida simple que puedes adaptar: convertirla en un
-        template de Django, agregar estilos, o conectar con tu backend.</p>
-</section>
-
-
-<section id="contact" style="margin-top:22px">
-    <h2>Contacto</h2>
-    <p style="color:var(--muted)">¿Tienes dudas o quieres sugerir un tutorial? Escribe a <a
-            href="mailto:info@example.com">info@example.com</a>.</p>
-</section>
-
-
-<footer>
-    © "Tu Nombre" — Página de tutoriales
-</footer>
-</main>
-</body>
-
-</html>
+</form>
+{% endblock %}
